@@ -16,6 +16,10 @@
 	return [super runModalOpenPanel:openPanel forTypes:nil];
 }
 
+- (NSDocument *)makeUntitledDocumentOfType:(NSString *)typeName error:(NSError * _Nullable *)outError {
+	return nil;
+}
+
 - (Class)documentClassForType:(NSString *)typeName {
 	return [CIEDocument class];
 }
