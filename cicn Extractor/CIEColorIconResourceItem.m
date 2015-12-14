@@ -102,7 +102,7 @@ static inline void withHandleLocked(_Nonnull Handle handle, void(^block)(Ptr)) {
 		ResType type __unused = 0;
 		Str255 name = "\p";
 		GetResInfo((Handle)resourceHandle, &identifier, &type, name);
-		_Nonnull CIconHandle cicnHandle = GCIEIcon(identifier);
+		_Nonnull CIconHandle cicnHandle = GetCIcon(identifier);
 		self.resourceIdentifier = identifier;
 		self.name = (NSString *)CFAutorelease(CFStringCreateWithPascalString(kCFAllocatorDefault, name, kCFStringEncodingMacRoman));
 		self.image = [[self class] imageWithColorIcon:cicnHandle resourceIdentifier:identifier];
