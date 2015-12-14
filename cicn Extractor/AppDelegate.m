@@ -15,4 +15,8 @@
 	[CIEDocumentController sharedDocumentController];
 }
 
+- (BOOL)applicationShouldOpenUntitledFile:(NSApplication *)sender {
+	return NO;
+}
+
 @end
